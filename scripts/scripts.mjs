@@ -27,7 +27,7 @@ async function getData(city) {
         message.textContent = `In ${location}, ${state}, it's currently ${condition}, ${temp} degrees (in fahrenheit) but it feels like ${tempFeels}.` 
     } else {
         locationInput.focus(); // Will focus on text field if city name is invalid
-        alert(`${location} is not a city. Please enter a valid one!`);
+        alert(`Please enter a valid city!`);
     }
     } catch (error) {
         
