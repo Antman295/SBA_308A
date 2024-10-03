@@ -1,6 +1,5 @@
 let form = document.getElementById('weatherLocation');
-let city = document.getElementById('location');
-
+let locationInput = document.getElementById('location');
 
 // async function to collect data from the API
 async function getData(city) {
@@ -8,6 +7,9 @@ async function getData(city) {
 
     // Try/Catch to catch error if something went wrong with the API
     try {
+    
+    let message = document.getElementById('message');
+
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
     
     // If/else to retrieve city from user if valid
@@ -15,16 +17,17 @@ async function getData(city) {
         const jsonData = await response.json();
 
         const location = jsonData.location.name;
-        const region = jsonData.location.region;
+        const state = jsonData.location.region;
         const condition = jsonData.current.condition.text;
         const temp = jsonData.current.temp_f;
         const tempFeels = jsonData.current.feelslike_f;
 
-        console.log(location, region, condition, temp, tempFeels);
-        console.log(jsonData);
+        console.log(location, state, condition, temp, tempFeels);
+        
+        message.textContent = `In ${location}, ${state}, it's currently ${condition}, ${temp} degrees (in fahrenheit) but it feels like ${tempFeels}.` 
     } else {
-        city.focus(); // Will focus on text field if city name is invalid
-        alert(`${jsonData} is not a city. Please enter a valid one!`);
+        locationInput.focus(); // Will focus on text field if city name is invalid
+        alert(`${location} is not a city. Please enter a valid one!`);
     }
     } catch (error) {
         
