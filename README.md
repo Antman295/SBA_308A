@@ -18,5 +18,6 @@ This was done with the use of JavaScript and the code was created inside Microso
 
 ## Acknowledgements
 [Weather API used for this project] https://www.weatherapi.com/
+
 [Code snippit used to fetch API data and also handle errors when fetching it] https://www.geeksforgeeks.org/build-a-weather-app-in-html-css-javascript/
 
