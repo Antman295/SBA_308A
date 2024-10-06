@@ -1,7 +1,8 @@
+// Importing functions from other mjs files
 import { getData } from "./api.mjs";
 import { displayWeather, showError } from "./ui.mjs";
 
-
+// Getting elements from HTML file
 let form = document.getElementById('weatherLocation');
 let locationInput = document.getElementById('location');
 

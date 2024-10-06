@@ -14,8 +14,7 @@ export async function getData(city) {
             throw new Error ('Invalid city');
         }
     } catch (error) {
-        
-        console.error('Error retreiving weather data: ', error);
+        console.error('Error retreiving weather data: ', error); // Will print error on the web console
         throw error;
     }
 }

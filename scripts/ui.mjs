@@ -1,3 +1,4 @@
+// Function to print data from the API
 export function displayWeather(jsonData) {
     let message = document.getElementById('message');
 
@@ -8,10 +9,9 @@ export function displayWeather(jsonData) {
     const tempFeels = jsonData.current.feelslike_f;
 
     message.textContent = `In ${location}, ${state}, it's currently ${condition}, ${temp} degrees (in fahrenheit) but it feels like ${tempFeels}.` 
-
 }
 
 export function showError() {
     document.getElementById('location').focus(); // Will focus on text field if city name is invalid
-    alert(`Please enter a valid city!`);
+    alert(`Please enter a valid city!`); // Error message if city is invalid
 }
