@@ -1,11 +1,13 @@
+# SBA_308A
+## Project Description: 
+This project utilizes getting data from an external source using an API with fetch, async and await functions to create a single page application with HTML and JavaScript. This was done by completing the following objectives: 
+
 **Objectives:**
 1. Use asynchronous JavaScript tools to build a responsive web application.
 2. Demonstrate understanding of the JavaScript event loop.
 3. Generate asynchronous code using Promises and async/await syntax.
 4. Use fetch and/or Axios to interact with an external web API.
 5. Organize files using modules and imports.
-
-
 
 ## Technolgies Used
 
